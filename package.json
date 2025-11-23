@@ -1,5 +1,6 @@
 {
   "name": "fast-spec-for-kiro",
+  "icon": "icon.png",
   "displayName": "Fast Spec for Kiro",
   "description": "Quickly send spec implementation requests to Kiro CLI with a single command for faster implementations.",
   "version": "0.1.0",
