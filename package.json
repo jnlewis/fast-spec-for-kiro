@@ -1,0 +1,77 @@
+{
+  "name": "fast-spec-for-kiro",
+  "displayName": "Fast Spec for Kiro",
+  "description": "Quickly send spec implementation requests to Kiro CLI with a single command for faster implementations.",
+  "version": "0.1.0",
+  "publisher": "kiro",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "keywords": ["kiro", "spec", "specification", "ai", "assistant"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fastSpecForKiro.implementSpec",
+        "title": "Fast Spec for Kiro: Implement Spec"
+      },
+      {
+        "command": "fastSpecForKiro.implementSpecFromContext",
+        "title": "Fast Spec for Kiro: Implement Spec"
+      },
+      {
+        "command": "fastSpecForKiro.openConfiguration",
+        "title": "Fast Spec for Kiro: Configure Prompt"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "fastSpecForKiro.implementSpecFromContext",
+          "when": "false"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "fastSpecForKiro.implementSpecFromContext",
+          "when": "explorerResourceIsFolder && resourcePath =~ /\\.kiro\\/specs\\//",
+          "group": "kiro@1"
+        },
+        {
+          "command": "fastSpecForKiro.implementSpecFromContext",
+          "when": "resourceFilename =~ /(requirements|design|tasks)\\.md$/ && resourcePath =~ /\\.kiro\\/specs\\//",
+          "group": "kiro@1"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Fast Spec for Kiro",
+      "properties": {
+        "fastSpecForKiro.promptTemplate": {
+          "type": "string",
+          "default": "Implement the feature in spec folder {{specPath}}. Read requirements.md and design.md. If tasks.md exists, complete tasks sequentially and check them off as you progress.",
+          "description": "Template for the implementation prompt. Use {{specPath}} as placeholder for the spec folder path.",
+          "editPresentation": "multilineText",
+          "markdownDescription": "Template for the implementation prompt. Use `{{specPath}}` as placeholder for the spec folder path.\n\n**Default:** `Implement the feature in spec folder {{specPath}}. Read requirements.md and design.md. If tasks.md exists, complete tasks sequentially and check them off as you progress.`"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jnlewis/fast-spec-for-kiro"
+  }
+}
