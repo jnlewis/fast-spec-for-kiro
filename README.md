@@ -22,12 +22,8 @@ Right-click any spec folder or file in `.kiro/specs/` and instantly send impleme
 
 ### Command Palette
 
-Press `Cmd+Shift+P` (macOS) or `Ctrl+Shift+P` (Windows/Linux), then type:
-```
-Fast Spec for Kiro: Implement Spec
-```
-
-Select a spec from the list and it will be sent to Kiro Chat.
+1. Press `Cmd+Shift+P` (macOS) or `Ctrl+Shift+P` (Windows/Linux), then type: `Fast Spec for Kiro: Implement Spec`
+2. Select a spec from the list and it will be sent to Kiro Chat.
 
 ## Configuration
 
@@ -38,7 +34,7 @@ Customize the implementation prompt template in Settings:
 
 ## Requirements
 
-- Kiro IDE with 'Fast Spec for Kiro' extension installed
+- Kiro IDE
 - Kiro CLI
 
 ## License
