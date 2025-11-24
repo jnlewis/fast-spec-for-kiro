@@ -1,6 +1,6 @@
 # Fast Spec for Kiro
 
-Kiro IDE extension for faster spec implementations. Quickly send spec implementation requests to Kiro CLI with a single comma
+Kiro IDE extension for faster spec implementations. Quickly send spec implementation requests to Kiro CLI with a single command.
 
 > **Note:** This extension uses a simple prompt for rapid MVP development and experimentation. For production-quality builds, use Kiro's primary spec implementation feature. This is a complementary tool for fast iteration, not a replacement.
 
@@ -11,6 +11,12 @@ Right-click any spec folder or file in `.kiro/specs/` and instantly send impleme
 - **Context menu integration** - Right-click spec folders or files to implement
 - **Command palette support** - Quick access via `Cmd+Shift+P`
 - **Customizable prompts** - Configure your implementation prompt
+
+![Context Menu](./docs/screenshots/screenshot-1.png)
+
+![Command Palette](./docs/screenshots/screenshot-2.png)
+
+![Configuration](./docs/screenshots/screenshot-3.png)
 
 ## Usage
 
